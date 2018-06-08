@@ -342,14 +342,17 @@ function createUserNamePromptMarkup() {
   document.getElementById(CHAT_ITEM).appendChild(promptContainer);
 }
 
-function setMessageInputAvailability(isAvailable) {
+function setOtherComponentsAvailability(isAvailable) {
   document.getElementById(INPUT_TEXT).disabled = !isAvailable;
   document.getElementById(CHAT_MESSAGE_BUTTON_ID).disabled = !isAvailable;
+  if (document.getElementById(TOGGLE_BUTTON) !== null) {
+    document.getElementById(TOGGLE_BUTTON).disabled = !isAvailable;
+  }
 }
 
 function askUserName() {
   createUserNamePromptMarkup();
-  setMessageInputAvailability(false);
+  setOtherComponentsAvailability(false);
   document
     .getElementById(PROMPT_CONFIRM_BUTTON_ID)
     .addEventListener("click", function saveUserName() {
@@ -358,7 +361,7 @@ function askUserName() {
       document
         .getElementById(CHAT_ITEM)
         .removeChild(document.getElementById(USER_NAME_PROMPT_ID));
-      setMessageInputAvailability(true);
+      setOtherComponentsAvailability(true);
       sendRequestToStorage(USER_NAME_FIELD, HTTP_PUT, config.userName);
     });
 }
@@ -481,6 +484,9 @@ function setDragHandler(container) {
     var mouseMoveHandler;
     var mouseUpHandler;
 
+    if (event.target.tagName === "BUTTON") {
+      return;
+    }
     function moveAt(e) {
       chat.style.left = e.pageX - shiftX + "px";
       chat.style.top = e.pageY - shiftY + "px";

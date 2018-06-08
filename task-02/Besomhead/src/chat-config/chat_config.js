@@ -132,7 +132,7 @@ function initListeners() {
     .addEventListener(EVENT_NAME, createCodeExample);
 }
 
-window.onload = function initPage() {
+window.addEventListener("load", function initPage() {
   initListeners();
   createCodeExample();
-};
+});

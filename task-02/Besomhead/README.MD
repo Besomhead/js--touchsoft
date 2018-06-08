@@ -1,3 +1,5 @@
-[Страница со встроенным скриптом]()
-[Страница конфигуратора]()
+[Страница со встроенным скриптом](http://htmlpreview.github.io/?https://github.com/Besomhead/js--touchsoft/blob/besomhead-task02/task-02/Besomhead/src/chat/append_chat.html)
+
+[Страница конфигуратора](http://htmlpreview.github.io/?https://github.com/Besomhead/js--touchsoft/blob/besomhead-task02/task-02/Besomhead/src/chat-config/chat_configurator.html)
+
 [Работающие тесты]()
