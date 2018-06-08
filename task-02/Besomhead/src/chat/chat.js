@@ -54,7 +54,6 @@ var config = {
   requests: "fetch",
   messagesLength: "0"
 };
-var timerID;
 
 function getCurrentTime(date) {
   var hours = date.getHours();
@@ -255,7 +254,6 @@ function updateMessagesList() {
         );
       }
       config.messagesLength = messagesKeys.length;
-      clearInterval(timerID);
     }
   );
 }
@@ -287,7 +285,7 @@ function sendMessage() {
     appendSingleMessage(document.getElementById(MESSAGES_LIST), message);
     saveMessage(message);
     setTimeout(sendReply, REPLY_TIMEOUT, message.body);
-    timerID = setInterval(updateMessagesList, REPLY_TIMEOUT);
+    setInterval(updateMessagesList, REPLY_TIMEOUT);
   }
 }
 
@@ -357,7 +355,10 @@ function askUserName() {
     .getElementById(PROMPT_CONFIRM_BUTTON_ID)
     .addEventListener("click", function saveUserName() {
       var userName = document.getElementById(PROMPT_INPUT_ID).value;
-      config.userName = userName.length > 0 ? userName : config.userName;
+      if (userName.length < 1){
+        return;
+      }
+      config.userName = userName;
       document
         .getElementById(CHAT_ITEM)
         .removeChild(document.getElementById(USER_NAME_PROMPT_ID));
