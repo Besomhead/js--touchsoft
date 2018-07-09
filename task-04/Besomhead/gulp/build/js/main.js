@@ -1,0 +1,5 @@
+(document.getElementsByClassName("content")[0].innerHTML +=
+  "<br>Proceeded by app.js"),
+  (document.getElementsByClassName("content")[0].innerHTML +=
+    "<br>Proceeded by main.js");
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uanMiXSwibmFtZXMiOlsiZG9jdW1lbnQiLCJnZXRFbGVtZW50c0J5Q2xhc3NOYW1lIiwiaW5uZXJIVE1MIl0sIm1hcHBpbmdzIjoiQUFBQUEsU0FBU0MsdUJBQXVCLFdBQVcsR0FBR0MsV0FDNUMsMEJBRUZGLFNBQVNDLHVCQUF1QixXQUFXLEdBQUdDLFdBQzVDIiwiZmlsZSI6Im1haW4uanMiLCJzb3VyY2VzQ29udGVudCI6WyJkb2N1bWVudC5nZXRFbGVtZW50c0J5Q2xhc3NOYW1lKFwiY29udGVudFwiKVswXS5pbm5lckhUTUwgKz1cclxuICBcIjxicj5Qcm9jZWVkZWQgYnkgYXBwLmpzXCI7XHJcblxyXG5kb2N1bWVudC5nZXRFbGVtZW50c0J5Q2xhc3NOYW1lKFwiY29udGVudFwiKVswXS5pbm5lckhUTUwgKz1cclxuICBcIjxicj5Qcm9jZWVkZWQgYnkgbWFpbi5qc1wiOyJdfQ==
